@@ -3,7 +3,7 @@ from socket import socket, AF_INET, SOCK_STREAM
 from json import loads, dumps
 
 
-def checkUpgrade():
+def checkUpgradeDebian():
   list_packages = []
   cache=apt.Cache()
   cache.update()
@@ -12,6 +12,9 @@ def checkUpgrade():
   for pkg in cache.get_changes():
     list_packages.append(pkg.name)
   return list_packages
+
+def checkUpgrade():
+  checkUpgradeDebian()
 
 def send_data(server,server_port):
   sock = socket(AF_INET, SOCK_STREAM)
