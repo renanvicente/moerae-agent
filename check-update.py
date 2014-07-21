@@ -24,15 +24,7 @@ def send_data(server,server_port):
   sock.close()
   return result
 
-
-#packages = { 'hostname': hostname,
-#             'ip':  ip,
-#             'packages': list_packages }
-
-#packages = {'packages': checkUpgrade() }
-#print(packages)
-#  sock.send(dumps(vhost_dict))
-
 if __name__ == '__main__':
-#  packages = {'packages': checkUpgrade() }
-  print(send_data('urleater.ananke.com.br',8888))
+  server = '127.0.0.1'
+  port   = 8888
+  print(send_data(server,port))
