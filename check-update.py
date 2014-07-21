@@ -14,7 +14,7 @@ def checkUpgradeDebian():
   return list_packages
 
 def checkUpgrade():
-  checkUpgradeDebian()
+  return checkUpgradeDebian()
 
 def send_data(server,server_port):
   sock = socket(AF_INET, SOCK_STREAM)
