@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+
+__version__ = '0.0.1'
+
 import apt
 from socket import socket, AF_INET, SOCK_STREAM
 from json import loads, dumps
